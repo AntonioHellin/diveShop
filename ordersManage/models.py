@@ -14,7 +14,7 @@ class Articles(models.Model):
 
     name = models.CharField(max_length=30)
     section = models.CharField(max_length=20)
-    price = models.IntegerField()
+    price = models.FloatField()
 
 class Orders(models.Model):
 
