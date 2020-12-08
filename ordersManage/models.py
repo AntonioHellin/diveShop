@@ -8,7 +8,7 @@ class Clients(models.Model):
     name = models.CharField(max_length=30)
     address = models.CharField(max_length=50)
     email = models.EmailField()
-    phone = CharField(max_length=7)
+    phone = CharField(max_length=9)
 
 class Articles(models.Model):
 
