@@ -1,6 +1,11 @@
 from django.contrib import admin
-from ordersManage.models import Clients, Articles, Orders
+from ordersManage.models import Client, Article, Order
 
-admin.site.register(Clients)
-admin.site.register(Articles)
-admin.site.register(Orders)
+class ClientsAdmin(admin.ModelAdmin):
+    
+    list_display = ("name", "address", "email", "phone")
+    search_fields = ("name", "email")
+
+admin.site.register(Client, ClientsAdmin)
+admin.site.register(Article)
+admin.site.register(Order)
