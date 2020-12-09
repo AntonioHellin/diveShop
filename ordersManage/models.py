@@ -7,7 +7,7 @@ class Clients(models.Model):
 
     name = models.CharField(max_length=30)
     address = models.CharField(max_length=50)
-    email = models.EmailField()
+    email = models.EmailField(blank = True, null = True)
     phone = CharField(max_length=9)
 
 class Articles(models.Model):
@@ -16,8 +16,8 @@ class Articles(models.Model):
     section = models.CharField(max_length=20)
     price = models.FloatField()
 
-    def __str__(self):
-        return 'The name of the article is %s, the section is %s and the price is %s' % (self.name, self.section, self.price)
+    #def __str__(self):
+    #    return 'The name of the article is %s, the section is %s and the price is %s' % (self.name, self.section, self.price)
 
 class Orders(models.Model):
 
